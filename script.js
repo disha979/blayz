@@ -1,6 +1,24 @@
 const card = document.getElementById('card');
 const avatar = document.getElementById('avatar');
 
+// Typewriter effect
+const typewriterElement = document.getElementById('typewriter');
+const textToType = 'Ďîśʜà';
+let charIndex = 0;
+
+function typeWriter() {
+  if (charIndex < textToType.length) {
+    typewriterElement.textContent += textToType.charAt(charIndex);
+    charIndex++;
+    setTimeout(typeWriter, 100); // 100ms between each character
+  }
+}
+
+// Start typewriter effect when page loads
+window.addEventListener('load', () => {
+  typeWriter();
+});
+
 // check if bg.gif exists; if it doesn't, fall back to dark overlay
 const testImg = new Image();
 testImg.src = 'bg.gif';
