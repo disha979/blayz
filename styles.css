@@ -10,7 +10,9 @@ body{background-image:url('bg.gif');background-size:cover;background-position:ce
 .center{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
 .card{width:320px;max-width:90vw;padding:28px;border-radius:16px;background:rgba(8,12,20,0.45);box-shadow:0 8px 30px rgba(2,6,23,0.6);transform-style:preserve-3d;transition:transform 0.12s ease-out}
 .avatar{width:110px;height:110px;border-radius:50%;display:block;margin:0 auto 12px;border:4px solid rgba(255,255,255,0.06);box-shadow:0 6px 20px rgba(124,58,237,0.18)}
-.name{font-size:1.45rem;text-align:center;margin:6px 0 4px}
+.name{font-size:1.45rem;text-align:center;margin:6px 0 4px;min-height:1.8rem}
+.name::after{content:'|';animation:blink 1s infinite;margin-left:2px}
+@keyframes blink{0%{opacity:1}49%{opacity:1}50%{opacity:0}100%{opacity:0}}
 .role{font-size:0.95rem;text-align:center;color:var(--muted);margin:0}
 .info{font-size:0.85rem;text-align:center;color:var(--muted);margin-top:12px}
 
