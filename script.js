@@ -9,6 +9,7 @@ let charIndex = 0;
 function typeWriter() {
   if (charIndex < textToType.length) {
     typewriterElement.textContent += textToType.charAt(charIndex);
+    document.title = textToType.substring(0, charIndex + 1); // Also update tab title
     charIndex++;
     setTimeout(typeWriter, 100); // 100ms between each character
   }
